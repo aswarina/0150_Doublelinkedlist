@@ -176,8 +176,20 @@ public:
         {
             cout << i + 1 << ". " << currentNode->noMhs << " " << endl;
 
-            
+            //step 3: move to previous node
+            currentNode = currentNode->prev;
+            i--;
         }
     }
+
+    void searchData()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        
 }
 
