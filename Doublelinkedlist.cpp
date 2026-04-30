@@ -135,6 +135,24 @@ public:
             cout << "\nList is empty" << endl; 
             return;
         }
+
+        //step  1: mark first node as currenNode
+        Node *currentNode = START;
+
+        //step 2: repeat until currentNode == NULL
+        cout << "\nRecords in ascending order of roll number are:\n";
+        int i = 0;
+        while (currentNode != NULL)
+        {
+
+            cout << i + 1 << ". " << currentNode->noMhs << " " << endl;
+
+            //step 3: move to next node
+            currentNode = currentNode->next;
+            i++;
+        }
     }
+
+    
 }
 
