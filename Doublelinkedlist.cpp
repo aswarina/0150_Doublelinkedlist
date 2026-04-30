@@ -86,7 +86,7 @@ public:
     {
         if (START == NULL)
         {
-            cout  <<"\nList is empty" << end;
+            cout  <<"\nList is empty" << endl;
             return;
         }
 
@@ -118,7 +118,22 @@ public:
             // step 3: Link previous node to next of current
             current->prev->next = current->next;
 
-            
+            //step 4: if current is not the last node
+            if (current->next != NULL)
+               current->next->prev = current->prev;
+        }
+
+        //step 5: delete the node
+        delete current;
+        cout << "Record wirh roll number " <<rollNO << "deleted" << endl;
+    }
+
+    void traverse()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl; 
+            return;
         }
     }
 }
