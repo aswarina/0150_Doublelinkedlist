@@ -86,6 +86,22 @@ public:
     {
         if (START == NULL)
         {
+            cout  <<"\nList is empty" << end;
+            return;
+        }
+
+        cout << "\nEnter the roll number of the student whose record is to be deleted: ";
+        int rollNO;
+        cin >> rollNO;
+
+        Node  *current = START;
+
+        //step 1: Traverse the list to find the node
+        while (current != NULL && current->noMhs != rollNO)
+            current = current->next;
+
+        if(current == NULL)
+        {
             
         }
     }
